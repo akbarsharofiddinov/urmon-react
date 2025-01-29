@@ -1,0 +1,125 @@
+.section-news {
+  display: flex;
+  align-items: start;
+  gap: 35px;
+  background-color: #fff;
+  padding-bottom: 50px;
+  .news {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.newsCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.newsCard {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #003475;
+  .info-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .date {
+      display: flex;
+      gap: 15px;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        gap: 5px;
+      }
+    }
+  }
+  &:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    flex-direction: row;
+    img {
+      max-width: 480px !important;
+      max-height: unset !important;
+    }
+    .newsCard_title {
+      font-size: 28px;
+    }
+  }
+  img {
+    max-height: 250px;
+    height: 100%;
+    object-fit: cover !important;
+  }
+}
+.news {
+  position: relative;
+}
+.news_link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  color: #00b533;
+  font-size: 17px;
+  font-weight: 700;
+}
+.ads_link {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  color: #00b533;
+  font-size: 17px;
+  font-weight: 700;
+}
+.newsCard_title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #003475;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: #00b533;
+  }
+}
+.date {
+  font-size: 14px;
+  color: #5b779a;
+}
+.news-page {
+  .newsCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  padding-bottom: 80px;
+  .newsCard {
+    &:first-child {
+      grid-column-start: unset !important;
+      grid-column-end: unset !important;
+      flex-direction: column !important;
+    }
+    img {
+      width: 100% !important;
+      max-height: unset !important;
+      height: 350px !important;
+    }
+  }
+  .newsCard_title {
+    font-size: 18px !important;
+  }
+}

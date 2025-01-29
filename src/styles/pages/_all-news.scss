@@ -1,0 +1,25 @@
+.all-news-page {
+  padding-bottom: 80px;
+  .newsCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+    .newsCard {
+      .newsCard_title {
+        font-size: 18px !important;
+      }
+
+      img {
+        width: 100% !important;
+        max-height: unset !important;
+        height: 350px !important;
+      }
+    }
+
+    &:first-child {
+      grid-column-start: unset !important;
+      grid-column-end: unset !important;
+      flex-direction: column !important;
+    }
+  }
+}
